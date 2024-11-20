@@ -1,0 +1,204 @@
+/* Search Form */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary: hsla(348,97%,63%,0.65);
+  --secondary: hsla(230,96%,62%,0.35);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary)), url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGxhbmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80") no-repeat center center/cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #f9e6ff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.center h1 {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.center form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+#search-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-form {
+  border: 1px solid black;
+  width: 65%;
+  position: relative;
+  background-color: rgba(92, 44, 76, 0.5);
+}
+
+.flight {
+  padding: 20px;
+}
+
+.flight input, select {
+  color: #6B6A6A;
+}
+
+.info-box {
+  padding: 10px 0;
+  margin-top: 20px;
+  flex: 1;
+  border-right: 20px solid transparent;
+}
+
+.info-box:last-child {
+  border-right: none;
+}
+
+.info-box label {
+  display: block;
+  color: #000000;
+  font-size: 0.9em;
+}
+
+.info-box > button {
+  margin-top: -2em;
+  margin-right: 3em;
+  white-space: nowrap;
+}
+
+.info-box input[type=text], input[type=submit], input[type=date], select {
+  border: none;
+  outline: none;
+  background: #f6eded;
+  margin-top: 5px;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+input[type=date] {
+  width: 15em;
+  margin-left: 0.7em;
+  margin-top: -1.1em;
+}
+
+#flight-type {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px dotted silver;
+}
+
+#flight-type .info-box {
+  flex: 0 1 25%;
+  display: flex;
+  align-items: center;
+}
+
+#flight-depart {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted silver;
+}
+
+#flight-depart .info-box {
+  position: relative;
+}
+
+#depart-res, #arrive-res {
+  position: absolute;
+  background: #FFFFFF;
+}
+
+#depart-res p, #arrive-res p {
+  padding: 7px 2px;
+  border-bottom: 1px dotted silver;
+}
+
+#depart-res p:hover, #arrive-res p:hover {
+  background: #EDEDED;
+  cursor: pointer;
+}
+
+#flight-dates {
+  display: flex;
+  border-bottom: 1px dotted silver;
+}
+
+#flight-info {
+  display: flex;
+  border-bottom: 1px dotted silver;
+}
+
+#flight-search .info-box {
+  display: flex;
+  justify-content: center;
+}
+
+#flight-search input[type=submit] {
+  background: #5b2a4d;
+  color: white;
+  padding: 0;
+  height: 50px;
+  font-size: 1.2em;
+}
+
+#flight-type button {
+  cursor: pointer;
+  outline: none;
+}
+#flight-type button.outline {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  color: #1172c4;
+  font-size: 14px;
+  border-color: #1172c4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 22px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+#flight-type button.outline a {
+  text-decoration: none;
+}
+#flight-type button.outline:hover {
+  color: white;
+  background: #5b2a4d;
+  border-color: white;
+  transition: all 0.2s linear;
+}
+#flight-type button.outline:active {
+  border-radius: 22px;
+}
+#flight-type button.purple-white {
+  font-weight: 700;
+  color: #664e96;
+  border-color: #664e96;
+  background: transparent;
+}
+#flight-type button.purple-white:hover {
+  color: white;
+  background: #5b2a4d;
+  border-color: #5b2a4d;
+}
